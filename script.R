@@ -1,15 +1,16 @@
 ################## reading the input file
 input <- read.table(
-  "SCONES_test.tsv",
+  "C:/Users/Varun/Desktop/ds/Develop add-ons for SCoNEs/SCONES_test.tsv",
   sep="\t", 
   header=TRUE)
 
 
 ################# calculating the log and logratio
 input$ratio <- input$testSample2/input$testSample1
-input$logratio <- log(input$ratio) 
+input$logratio <- log(-1 * input$ratio) 
 
-
+# plotly for effecient and interactive graphs
+# markers according to chr
 library(plotly)
 plot_ly(input, 
         x = start, 
