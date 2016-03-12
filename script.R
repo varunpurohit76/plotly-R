@@ -1,6 +1,9 @@
+WD <- getwd()
+setwd(WD)
+
 ################## reading the input file
 input <- read.table(
-  "C:/Users/Varun/Desktop/ds/Develop add-ons for SCoNEs/SCONES_test.tsv",
+  "SCONES_test.tsv",
   sep="\t", 
   header=TRUE)
 
